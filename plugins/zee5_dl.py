@@ -59,7 +59,7 @@ async def zee5_capture(bot, update):
             w = update.text 
             req1 = requests.get("https://useraction.zee5.com/tokennd").json()
             rgx = re.findall("([0-9]?\w+)", w)[-3:]
-            li = { "url":"zee5vodnd.akamaized.net", "token":"https://gwapi.zee5.com/content/details/" }
+            li = { "url":"drm.zee5play.ml", "token":"https://gwapi.zee5.com/content/details/" }
             req2 = requests.get("https://useraction.zee5.com/token/platform_tokens.php?platform_name=web_app").json()["token"]
             headers["X-Access-Token"] = req2
             req3 = requests.get("https://useraction.zee5.com/token").json()    
